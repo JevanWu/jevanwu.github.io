@@ -27,6 +27,11 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
+p {
+  text-align: justify;
+}
+
 body {
 	line-height: 1;
 }
