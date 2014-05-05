@@ -9,8 +9,8 @@ categories: jekyll Ruby
   "nested if statement" is normally considered as the code smell. We should try to minimize the number of "nested if statement", though we cannot avoid using it completely. 
 
 #### 1. if the 'if statement' is embraced by a loop and without 'else', use 'next' instead
-
  original code:
+
  ```ruby
  foo.each do |f|
    if bar
@@ -26,6 +26,7 @@ categories: jekyll Ruby
  It looks not quike clean, isn't it?
 
  cleaned code:
+
  ```ruby
  foo.each do |f|
    next if bar
@@ -39,8 +40,8 @@ categories: jekyll Ruby
  It looks much better to me.
 
 #### 2. use variable to eliminate the 'if statement'
-
  original code:
+
  ```ruby
  if bar
    name = "Jevan"
@@ -52,6 +53,7 @@ categories: jekyll Ruby
  ```
 
  cleaned code:
+
  ```ruby
  user_name = bar ? "Jevan" : "John"
  name = user_name
