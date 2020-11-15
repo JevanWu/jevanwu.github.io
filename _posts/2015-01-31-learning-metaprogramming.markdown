@@ -2,7 +2,7 @@
 layout: post
 title: "Learning metaprogramming"
 date:   2015-01-31 22:07:20
-categories: jekyll update
+categories: Ruby
 ---
 
 #### 1. Dynamic Patch
@@ -16,7 +16,7 @@ categories: jekyll update
   the `define_method` method could be used to create instance method
 
   ```
-  class Foo do 
+  class Foo do
     define_method(name) do
       info = @data_source.send "get_#{name}_info", @id price = @data_source.send "get_#{name}_price", @id result = "#{name.capitalize}: #{info} ($#{price})" return "* #{result}" if price >= 100
       result
@@ -39,9 +39,9 @@ categories: jekyll update
   ```
 
   the `remove_method` method is similar, but it leaves the inherited methods
-  
+
   ```
   remove_method method_name
   ```
 
- 
+

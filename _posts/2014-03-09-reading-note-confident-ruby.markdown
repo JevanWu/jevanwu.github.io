@@ -2,7 +2,7 @@
 layout: post
 title:  "[Reading Note] 'Confident Ruby'"
 date:   2014-03-09 22:51:42
-categories: Reading Note
+categories: [Reading Note, Ruby]
 ---
 
 ### Collecting Input
@@ -42,7 +42,7 @@ categories: Reading Note
   ```
   #### Converting to real code
 
-### Performing Task 
+### Performing Task
 
 ### Delivering output
 

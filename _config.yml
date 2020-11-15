@@ -1,3 +1,12 @@
-name: Your New Jekyll Site
-markdown: redcarpet
-pygments: true
+# Setup
+name:         Jevan's Blog
+tagline:      A responsive theme for your project on GitHub Pages
+baseurl:      ""
+locale:       "en"
+
+# Gems
+gems:
+  - jekyll-paginate
+
+#Others
+markdown: kramdown

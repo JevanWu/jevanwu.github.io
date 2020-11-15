@@ -2,7 +2,7 @@
 layout: post
 title: "How to set up the environment of Ruby on Rails"
 date:   2014-03-08 22:35:42
-categories: jekyll update
+categories: Ruby
 ---
 
 #### 1. Install RVM and Ruby
@@ -23,9 +23,9 @@ categories: jekyll update
 
   ```
   ruby -v
-  ``` 
+  ```
 
-  to check if the ruby is available. 
+  to check if the ruby is available.
 
 #### 2. Install Rails
   Rails is the popular web framework based on ruby.
