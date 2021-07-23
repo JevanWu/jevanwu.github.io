@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title> Ruby: Clean your code! </title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <!-- <h1> Jevan's Blog </h1> -->
+        <h1>Jevan Wu</h1>
+        <h2>Web developer | Vim User | Team Lead <br> Chengdu, China</h2>
+        <h3>
+          <a href="https://github.com/JevanWu">Github</a> |
+          <a href="https://www.linkedin.com/in/jevan-wu-5496a76b/">Linkedin</a> |
+          <a href="mailto:jevanwu@gmail.com">Email</a>
+        </h3>
+        <div class="avatar">
+          <img src="/images/avatar.jpeg"/>
+        </div>
+        <!-- <a href="https://github.com/pietromenna/jekyll&#45;architect&#45;theme" class="button"><small>Follow me on</small>GitHub</a> -->
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+
+          <h2>Ruby: Clean your code!</h2>
+<p class="meta">05 May 2014</p>
+
+<h2 id="1-minimize-the-number-of-nested-if-statement">1. Minimize the number of “nested if statement”</h2>
+<p>“nested if statement” is normally considered as the code smell. We should try to minimize the number of “nested if statement”, though we cannot avoid using it completely.</p>
+
+<h4 id="1-if-the-if-statement-is-embraced-by-a-loop-and-without-else-use-next-instead">1. if the ‘if statement’ is embraced by a loop and without ‘else’, use ‘next’ instead</h4>
+<p>original code:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">foo</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span>
+   <span class="k">if</span> <span class="n">bar</span>
+     <span class="k">if</span> <span class="n">baz</span>
+       <span class="o">...</span>
+     <span class="k">else</span>
+       <span class="o">...</span>
+     <span class="k">end</span>
+   <span class="k">end</span>
+ <span class="k">end</span>
+</code></pre></div></div>
+
+<p>It looks not quike clean, isn’t it?</p>
+
+<p>cleaned code:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">foo</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span>
+   <span class="k">next</span> <span class="k">if</span> <span class="n">bar</span>
+   <span class="k">if</span> <span class="n">baz</span>
+     <span class="o">...</span>
+   <span class="k">else</span>
+     <span class="o">...</span>
+   <span class="k">end</span>
+ <span class="k">end</span>
+</code></pre></div></div>
+<p>It looks much better to me.</p>
+
+<h4 id="2-use-variable-to-eliminate-the-if-statement">2. use variable to eliminate the ‘if statement’</h4>
+<p>original code:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">if</span> <span class="n">bar</span>
+   <span class="nb">name</span> <span class="o">=</span> <span class="s2">"Jevan"</span>
+   <span class="n">age</span> <span class="o">=</span> <span class="mi">24</span>
+ <span class="k">else</span>
+   <span class="nb">name</span> <span class="o">=</span> <span class="s2">"John"</span>
+   <span class="n">age</span> <span class="o">=</span> <span class="mi">24</span>
+ <span class="k">end</span>
+</code></pre></div></div>
+
+<p>cleaned code:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">user_name</span> <span class="o">=</span> <span class="n">bar</span> <span class="p">?</span> <span class="s2">"Jevan"</span> <span class="p">:</span> <span class="s2">"John"</span>
+ <span class="nb">name</span> <span class="o">=</span> <span class="n">user_name</span>
+ <span class="n">age</span> <span class="o">=</span> <span class="mi">24</span>
+</code></pre></div></div>
+
+
+
+
+        </section>
+
+        <aside id="sidebar">
+          <!-- <a href="https://github.com/pietromenna/jekyll&#45;architect&#45;theme/archive/master.zip" class="button"> -->
+          <!--   <small>Download</small> -->
+          <!--   .zip file -->
+          <!-- </a> -->
+          <!-- <a href="https://github.com/pietromenna/jekyll&#45;architect&#45;theme/archive/master.tar.gz" class="button"> -->
+          <!--   <small>Download</small> -->
+          <!--   .tar.gz file -->
+          <!-- </a> -->
+          <h3>Featured:</h3>
+          <ul>
+            <li><a href="/">Home</a></li>
+            
+              <li><a href="/categories/ruby" name="ruby"># ruby</a></li>
+            
+              <li><a href="/categories/programming" name="programming"># programming</a></li>
+            
+              <li><a href="/categories/reading" name="reading"># reading</a></li>
+            
+          </ul>
+
+          <p class="repo-owner"><a href="https://github.com/pietromenna/jekyll-architect-theme">jekyll-architect-theme</a> is maintained by <a href="https://github.com/pietromenna">pietromenna</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  </body>
+</html>
