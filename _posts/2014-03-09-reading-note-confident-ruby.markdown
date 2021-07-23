@@ -2,7 +2,7 @@
 layout: post
 title:  "[Reading Note] 'Confident Ruby'"
 date:   2014-03-09 22:51:42
-categories: [Reading Note, Ruby]
+categories: [ruby, programming, reading]
 ---
 
 ### Collecting Input

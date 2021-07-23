@@ -2,7 +2,7 @@
 layout: post
 title: "聊一聊设计模式"
 date:   2020-11-15
-categories: design patterns
+categories: [programming]
 ---
 
 #### 背景

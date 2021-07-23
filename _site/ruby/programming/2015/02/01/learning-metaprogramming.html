@@ -13,7 +13,7 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <title> Jevan's Blog </title>
+    <title> Learning metaprogramming </title>
   </head>
 
   <body>
@@ -38,27 +38,44 @@
       <div class="inner clearfix">
         <section id="main-content">
 
-          <!-- <h3><a name="welcome&#45;to&#45;my&#45;blog" class="anchor" href="#welcome&#45;to&#45;my&#45;blog"><span class="octicon octicon&#45;link"></span></a>About Me</h3> -->
-<!-- <p>Hi! My name is Jevan Wu. I'm a web developer based on <a href="https://www.ruby&#45;lang.org/en/">Ruby</a> on <a href="http://rubyonrails.org/">Rails</a>. I built up <a href="http://www.prodygia.com">Prodygia</a> at <a href="http://www.originate.com">Originate</a>. Now, i'm working at <a href="http://hua.li"> hua.li</a>. If you are interested, you can also visit my <a href="https://www.linkedin.com/profile/view?id=249549897"> Linkedin</a> -->
+          <h2>Learning metaprogramming</h2>
+<p class="meta">01 Feb 2015</p>
 
-<h3>Posts</h3>
-<div>
-  <ul>
-    
-      <li><a href="/reading/2021/01/10/principles.html">Principles</a> &raquo; <span>10 Jan 2021</span> </li>
-    
-      <li><a href="/programming/2020/11/15/%E8%81%8A%E4%B8%80%E8%81%8A%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html">聊一聊设计模式</a> &raquo; <span>15 Nov 2020</span> </li>
-    
-      <li><a href="/ruby/programming/2015/02/01/learning-metaprogramming.html">Learning metaprogramming</a> &raquo; <span>01 Feb 2015</span> </li>
-    
-      <li><a href="/ruby/programming/2014/05/05/ruby-clean-your-code.html">Ruby: Clean your code!</a> &raquo; <span>05 May 2014</span> </li>
-    
-      <li><a href="/ruby/programming/reading/2014/03/10/reading-note-confident-ruby.html">[Reading Note] 'Confident Ruby'</a> &raquo; <span>10 Mar 2014</span> </li>
-    
-      <li><a href="/ruby/programming/2014/03/09/how-to-set-up-the-environment-of-ruby-on-rails.html">How to set up the environment of Ruby on Rails</a> &raquo; <span>09 Mar 2014</span> </li>
-    
-  </ul>
-</div>
+<h4 id="1-dynamic-patch">1. Dynamic Patch</h4>
+<p>the <code class="language-plaintext highlighter-rouge">send</code> method could be used to call methods</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  obj.send(:my_method, params)
+</code></pre></div></div>
+
+<h4 id="2-dynamic-method">2. Dynamic Method</h4>
+<p>the <code class="language-plaintext highlighter-rouge">define_method</code> method could be used to create instance method</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  class Foo do
+    define_method(name) do
+      info = @data_source.send "get_#{name}_info", @id price = @data_source.send "get_#{name}_price", @id result = "#{name.capitalize}: #{info} ($#{price})" return "* #{result}" if price &gt;= 100
+      result
+    end
+  end
+</code></pre></div></div>
+
+<p>the <code class="language-plaintext highlighter-rouge">instance_method</code> could be used to call an instance method</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  f = Foo.new
+  f.instance_method(:method_name)
+</code></pre></div></div>
+
+<h4 id="3-remove-method">3. Remove Method</h4>
+<p>the <code class="language-plaintext highlighter-rouge">undef_method</code> method could be used to remove method, it would remove both receiver’s methods and inherited methods</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  undef_method method_name
+</code></pre></div></div>
+
+<p>the <code class="language-plaintext highlighter-rouge">remove_method</code> method is similar, but it leaves the inherited methods</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  remove_method method_name
+</code></pre></div></div>
+
+
 
 
         </section>

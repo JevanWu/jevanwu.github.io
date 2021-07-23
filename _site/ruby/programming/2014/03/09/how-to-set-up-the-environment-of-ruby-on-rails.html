@@ -13,7 +13,7 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <title> Jevan's Blog </title>
+    <title> How to set up the environment of Ruby on Rails </title>
   </head>
 
   <body>
@@ -38,27 +38,44 @@
       <div class="inner clearfix">
         <section id="main-content">
 
-          <!-- <h3><a name="welcome&#45;to&#45;my&#45;blog" class="anchor" href="#welcome&#45;to&#45;my&#45;blog"><span class="octicon octicon&#45;link"></span></a>About Me</h3> -->
-<!-- <p>Hi! My name is Jevan Wu. I'm a web developer based on <a href="https://www.ruby&#45;lang.org/en/">Ruby</a> on <a href="http://rubyonrails.org/">Rails</a>. I built up <a href="http://www.prodygia.com">Prodygia</a> at <a href="http://www.originate.com">Originate</a>. Now, i'm working at <a href="http://hua.li"> hua.li</a>. If you are interested, you can also visit my <a href="https://www.linkedin.com/profile/view?id=249549897"> Linkedin</a> -->
+          <h2>How to set up the environment of Ruby on Rails</h2>
+<p class="meta">09 Mar 2014</p>
 
-<h3>Posts</h3>
-<div>
-  <ul>
-    
-      <li><a href="/reading/2021/01/10/principles.html">Principles</a> &raquo; <span>10 Jan 2021</span> </li>
-    
-      <li><a href="/programming/2020/11/15/%E8%81%8A%E4%B8%80%E8%81%8A%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html">聊一聊设计模式</a> &raquo; <span>15 Nov 2020</span> </li>
-    
-      <li><a href="/ruby/programming/2015/02/01/learning-metaprogramming.html">Learning metaprogramming</a> &raquo; <span>01 Feb 2015</span> </li>
-    
-      <li><a href="/ruby/programming/2014/05/05/ruby-clean-your-code.html">Ruby: Clean your code!</a> &raquo; <span>05 May 2014</span> </li>
-    
-      <li><a href="/ruby/programming/reading/2014/03/10/reading-note-confident-ruby.html">[Reading Note] 'Confident Ruby'</a> &raquo; <span>10 Mar 2014</span> </li>
-    
-      <li><a href="/ruby/programming/2014/03/09/how-to-set-up-the-environment-of-ruby-on-rails.html">How to set up the environment of Ruby on Rails</a> &raquo; <span>09 Mar 2014</span> </li>
-    
-  </ul>
-</div>
+<h4 id="1-install-rvm-and-ruby">1. Install RVM and Ruby</h4>
+<p>RVM is used to manage different version of ruby. With RVM, you can switch between multiple different version of ruby.
+  To install RVM, simply type the following command in the terminal</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ \curl -sSL https://get.rvm.io | bash
+</code></pre></div></div>
+
+<p>or, more convenient, you can just install the RVM with stable ruby by using</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ \curl -sSL https://get.rvm.io | bash -s stable --ruby
+</code></pre></div></div>
+
+<p>When you finish this step, you can type</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  ruby -v
+</code></pre></div></div>
+
+<p>to check if the ruby is available.</p>
+
+<h4 id="2-install-rails">2. Install Rails</h4>
+<p>Rails is the popular web framework based on ruby.
+  With Ruby installed, you can install all of Rails and its dependencies through RubyGems on the command line:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  gem install rails
+</code></pre></div></div>
+
+<p>type</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  rails -v
+</code></pre></div></div>
+
+<p>to check if the rails is available.</p>
+
+<p>Here we go! Welcome to the world of Ruby on Rails</p>
+
 
 
         </section>

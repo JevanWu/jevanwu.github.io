@@ -2,7 +2,7 @@
 layout: post
 title: "How to set up the environment of Ruby on Rails"
 date:   2014-03-08 22:35:42
-categories: Ruby
+categories: [ruby, programming]
 ---
 
 #### 1. Install RVM and Ruby

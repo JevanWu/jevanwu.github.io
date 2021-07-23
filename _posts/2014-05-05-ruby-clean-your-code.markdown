@@ -2,7 +2,7 @@
 layout: post
 title: "Ruby: Clean your code!"
 date:   2014-05-05 and updating
-categories: Ruby
+categories: [ruby, programming]
 ---
 
 ## 1. Minimize the number of "nested if statement"

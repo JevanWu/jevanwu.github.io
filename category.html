@@ -1,15 +1,14 @@
 ---
 layout: default
 title: Jevan's Blog
+permalink: "/category/{{ category }}"
 ---
 <!-- <h3><a name="welcome&#45;to&#45;my&#45;blog" class="anchor" href="#welcome&#45;to&#45;my&#45;blog"><span class="octicon octicon&#45;link"></span></a>About Me</h3> -->
 <!-- <p>Hi! My name is Jevan Wu. I'm a web developer based on <a href="https://www.ruby&#45;lang.org/en/">Ruby</a> on <a href="http://rubyonrails.org/">Rails</a>. I built up <a href="http://www.prodygia.com">Prodygia</a> at <a href="http://www.originate.com">Originate</a>. Now, i'm working at <a href="http://hua.li"> hua.li</a>. If you are interested, you can also visit my <a href="https://www.linkedin.com/profile/view?id=249549897"> Linkedin</a> -->
 
-<h3>Posts</h3>
-<div>
+<h3>Categories</h3>
   <ul>
-    {% for post in site.posts %}
-      <li><a href="{{ post.url }}">{{ post.title }}</a> &raquo; <span>{{ post.date | date_to_string }}</span> </li>
+    {% for category in site.categories %}
+      <li><a href="{{ post.url }}">{{ category | first }}</a></li>
     {% endfor %}
   </ul>
-</div>

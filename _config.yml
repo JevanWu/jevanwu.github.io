@@ -7,18 +7,15 @@ locale:       "en"
 # Gems
 plugins:
   - jekyll-paginate
+  - jekyll-archives
+
+jekyll-archives:
+  enabled:
+    - categories
+  layout: category
+  permalinks:
+    category: '/categories/:name/'
 
 #Others
 markdown: kramdown
 
-collections:
-  category:
-    output: true
-
-defaults:
-  -
-    scope:
-      path: ""
-      type: category
-    values:
-      layout: "category"

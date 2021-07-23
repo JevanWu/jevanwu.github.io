@@ -1,25 +1,25 @@
 <!DOCTYPE html>
-<html lang="{{ site.locale }}">
+<html lang="en">
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/stylesheets/print.css" media="print" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/print.css" media="print" />
 
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <title> {{ page.title }} </title>
+    <title> reading </title>
   </head>
 
   <body>
     <header>
       <div class="inner">
-        <!-- <h1> {{ site.name }} </h1> -->
+        <!-- <h1> Jevan's Blog </h1> -->
         <h1>Jevan Wu</h1>
         <h2>Web developer | Vim User | Team Lead <br> Chengdu, China</h2>
         <h3>
@@ -38,7 +38,18 @@
       <div class="inner clearfix">
         <section id="main-content">
 
-          {{ content }}
+          <h3>reading</h3>
+<div class="categories">
+  <ul class="posts">
+    
+      <li><a href="/reading/2021/01/10/principles.html">Principles</a> &raquo; <span>10 Jan 2021</span> </li>
+    
+      <li><a href="/ruby/programming/reading/2014/03/10/reading-note-confident-ruby.html">[Reading Note] 'Confident Ruby'</a> &raquo; <span>10 Mar 2014</span> </li>
+    
+  </ul>
+</div>
+
+
 
         </section>
 
@@ -54,9 +65,13 @@
           <h3>Featured:</h3>
           <ul>
             <li><a href="/">Home</a></li>
-            {% for category in site.categories %}
-              <li><a href="/categories/{{ category | first }}" name="{{ category | first }}"># {{ category | first }}</a></li>
-            {% endfor %}
+            
+              <li><a href="/categories/ruby" name="ruby"># ruby</a></li>
+            
+              <li><a href="/categories/programming" name="programming"># programming</a></li>
+            
+              <li><a href="/categories/reading" name="reading"># reading</a></li>
+            
           </ul>
 
           <p class="repo-owner"><a href="https://github.com/pietromenna/jekyll-architect-theme">jekyll-architect-theme</a> is maintained by <a href="https://github.com/pietromenna">pietromenna</a>.</p>

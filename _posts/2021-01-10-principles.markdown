@@ -2,7 +2,7 @@
 layout: post
 title: "Principles"
 date: 2021-01-10
-categories: principles
+categories: [reading]
 ---
 
 由于读了Ray Dalio的《原则》，借鉴其中不断记录自己通过犯错和人生体验总结出的原则(principle)的方式，在这里记录自己当前认为比较对的一些原则的总结.

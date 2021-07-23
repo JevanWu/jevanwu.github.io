@@ -2,7 +2,7 @@
 layout: post
 title: "Learning metaprogramming"
 date:   2015-01-31 22:07:20
-categories: Ruby
+categories: [ruby, programming]
 ---
 
 #### 1. Dynamic Patch
