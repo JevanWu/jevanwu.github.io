@@ -1,5 +1,5 @@
 # Setup
-name:         Jevan's Blog
+name:         Jevan Wu's Blog
 tagline:      A responsive theme for your project on GitHub Pages
 baseurl:      ""
 locale:       "en"
@@ -7,7 +7,11 @@ locale:       "en"
 # Gems
 plugins:
   - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
   - jekyll-archives
+
+url: "https://jevanwu.github.io/"
 
 jekyll-archives:
   enabled:

@@ -5,3 +5,12 @@ layout: default
 <p class="meta">{{ page.date | date_to_string }}</p>
 
 {{ content }}
+
+<hr>
+
+<p>
+Tags:&nbsp;
+{% for category in page.categories %}
+  <a class='tag' href="/categories/{{ category }}" name="{{ category }}">{{ category }}</a>
+{% endfor %}
+</p>
