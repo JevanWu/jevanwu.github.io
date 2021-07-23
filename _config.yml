@@ -7,14 +7,13 @@ locale:       "en"
 # Gems
 plugins:
   - jekyll-paginate
-  - jekyll-archives
 
-jekyll-archives:
-  enabled:
-    - categories
-  layout: category
-  permalinks:
-    category: '/categories/:name/'
+defaults:
+  - scope:
+      type: categories  # select all category pages
+    values:
+      layout: category
+      permalink: categories/:category/
 
 #Others
 markdown: kramdown

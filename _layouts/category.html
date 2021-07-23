@@ -5,7 +5,7 @@ layout: default
 <h3>{{page.title}}</h3>
 <div class="categories">
   <ul class="posts">
-    {% for post in page.posts %}
+    {% for post in page.linked_posts %}
       <li><a href="{{ post.url }}">{{ post.title }}</a> &raquo; <span>{{ post.date | date_to_string }}</span> </li>
     {% endfor %}
   </ul>
