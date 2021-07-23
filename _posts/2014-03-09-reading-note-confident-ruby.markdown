@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Reading Note] 'Confident Ruby'"
+title:  "Confident Ruby"
 date:   2014-03-09 22:51:42
 categories: [ruby, programming, reading]
 ---
