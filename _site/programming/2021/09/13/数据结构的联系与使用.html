@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title> 数据结构的联系与使用 </title>
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>数据结构的联系与使用 | Jevan Wu’s Blog</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="数据结构的联系与使用" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="前言" />
+<meta property="og:description" content="前言" />
+<link rel="canonical" href="https://jevanwu.github.io//programming/2021/09/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%9A%84%E8%81%94%E7%B3%BB%E4%B8%8E%E4%BD%BF%E7%94%A8.html" />
+<meta property="og:url" content="https://jevanwu.github.io//programming/2021/09/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%9A%84%E8%81%94%E7%B3%BB%E4%B8%8E%E4%BD%BF%E7%94%A8.html" />
+<meta property="og:site_name" content="Jevan Wu’s Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-09-13T00:00:00+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="数据结构的联系与使用" />
+<script type="application/ld+json">
+{"datePublished":"2021-09-13T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://jevanwu.github.io//programming/2021/09/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%9A%84%E8%81%94%E7%B3%BB%E4%B8%8E%E4%BD%BF%E7%94%A8.html"},"url":"https://jevanwu.github.io//programming/2021/09/13/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%9A%84%E8%81%94%E7%B3%BB%E4%B8%8E%E4%BD%BF%E7%94%A8.html","description":"前言","headline":"数据结构的联系与使用","dateModified":"2021-09-13T00:00:00+08:00","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <!-- <h1> Jevan Wu's Blog </h1> -->
+        <h1>Jevan Wu</h1>
+        <h2>Who: Web developer | Team Lead | Vim User <br> Location: Chengdu, China</h2>
+        <h3>
+          contacts:
+          <a href="https://github.com/JevanWu" target="_blank">Github</a> |
+          <a href="https://www.linkedin.com/in/jevan-wu/" target="_blank">Linkedin</a> |
+          <a href="mailto:jevanwu@gmail.com">Email</a>
+        </h3>
+        <div class="avatar">
+          <img src="/images/avatar.jpeg"/>
+        </div>
+        <!-- <a href="https://github.com/pietromenna/jekyll&#45;architect&#45;theme" class="button"><small>Follow me on</small>GitHub</a> -->
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+
+          <h1>数据结构的联系与使用</h1>
+<p class="meta">13 Sep 2021</p>
+
+<h2 id="前言">前言</h2>
+
+<p>作为程序员，基础数据结构是我们在日常工作中必须掌握的基础知识，就像是建房子时的图纸，而高级的数据结构会让我们在工作中以更加高效和巧妙的方式来解决所遇到的问题。</p>
+
+<p>然而，没有一个数据结构是完美的，每一个数据结构都是优点和缺点并存，就如同世间万物，总是有正反或阴阳两面。</p>
+
+<p>这里我尝试由浅入深去猜想为什么会出现如此多的数据结构，以及他们的产生是为了解决哪一类问题。</p>
+
+<h2 id="基础结构">基础结构</h2>
+<h3 id="array">Array</h3>
+<h5 id="查找-o1">查找 o(1)</h5>
+<h5 id="插入删除-on">插入/删除 o(n)</h5>
+
+<p>数组应该是我们日常中使用最多的数据结构，数组是由一个个元素组成，并以下标一一做标记。它的特别非常明确，可以直接通过下标查找或修改元素，因此查找和修改非常高效；
+但要插入或删除元素时，需要重新排列下标，效率较低。因此数组适合<code class="language-plaintext highlighter-rouge">多读少写</code>的场景（这里的写指插入和删除元素）。</p>
+
+<p>那肯定要解决<code class="language-plaintext highlighter-rouge">多写少读</code>的场景啊，所以就发明了<code class="language-plaintext highlighter-rouge">LinkedList</code>来解决这个场景。</p>
+
+<h3 id="linkedlist">LinkedList</h3>
+<h4 id="查找-on">查找 O(n)</h4>
+<h4 id="插入删除-o1">插入/删除 O(1)</h4>
+
+<p>链表也是由一个一个元素组成，但是以一种串联的形式组成。 链表的元素叫node，下一个node指向上一个node，一直到最前面的node，像是一个链条。如果要在AB两个node中新增一个node，
+只需B node指向新node，而新node再指向A，就完成了插入，非常高效。但它不是很擅长查找的场景，因为没有下标来快速定位，它需要一个一个node地询问，直到找到自己的目标。因此数组
+适合<code class="language-plaintext highlighter-rouge">少读多写</code>的场景。</p>
+
+<h3 id="map">Map</h3>
+<h4 id="查找-o1-1">查找 O(1)</h4>
+<h4 id="插入-o1">插入 O(1)</h4>
+
+<p>而当程序员需要查找快，插入也要快的时候，就发明了Map。
+Map是由一个个pairs组成，pairs是由key和value组成。
+Map的优势就是可通过key快速查找到value的值。也可以高效地插入新的Pair。
+当然Map也有缺点，Map的缺点是元素无序，且Key元素不可重复。</p>
+
+<h3 id="tree">Tree</h3>
+<h4 id="查找-ologn">查找 O(logN)</h4>
+<h4 id="插入-o1-1">插入 O(1)</h4>
+
+<p>再过了一阵，当程序员面临的场景是又要插入快，又要读取快，又要有顺序的时候，程序员绞尽脑汁，受到二分法查找的启发，发明了Tree。二分法的思路有点像算法中的“剪枝”，当路径分叉时，只关注有用的路径，Tree也是利用这种思路来提效的。</p>
+
+<h2 id="array-的衍生">Array 的衍生</h2>
+
+<h3 id="vectorjava和c中的实现">Vector(Java和C++中的实现)</h3>
+
+<p>众所周知，Array有个限制，就是在初始化时需要给定大小来确定分配的内存大小。程序员写多了Size不够用的Array之后，心想将这个过程抽个方法吧，太累了，后面就演进成了一个新型数据结构Vector，
+其实就是能够自动扩展的Array了。</p>
+
+<p>tips: Java中的Vector还有个特点是单线程插入</p>
+
+<h3 id="stack">Stack</h3>
+
+<p>当程序员经常要写插入元素到数组，然后以倒序输出的场景。他就在想，这块代码是不是也能抽离一下，每次都要记录下标和Size，封装一下应该就通用很多。于是，就有了Stack，一个以First In Last Out闻名的数据结构。
+其实就是倒序排序了一下。</p>
+
+<h3 id="queue">Queue</h3>
+
+<p>既然有了正序输入倒序输出的场景（Stack），自然少不了正序输入正序输出的场景了，于是程序员也创造了Queue，类似管道或队列，所以Queue的特点就是First In First Out。</p>
+
+<h3 id="dequeuedouble-end-queue">DeQueue(Double-end Queue)</h3>
+
+<p>有了Queue之后，程序员又想，要不再做灵活点，方便我从头尾都可以输入，也可以从头尾都可以读取，于是就有了DeQueque。</p>
+
+<h2 id="map的衍生">Map的衍生</h2>
+
+<h3 id="set">Set</h3>
+
+<p>程序员偶尔会遇到需要元素唯一的场景，如果有Array来做，我们在收集完元素后，还需要进行一个算法复杂度为O(n)的排除计算。因此期望用一个数据结构来解决这个问题，就叫Set。</p>
+
+<p>之前我们说到过Map有个特点是Key元素不可重复，Java程序员发现可以利用Map这个特性，在元素去重的场景做到自然过滤，避免了多余的排除计算，因此Java中，Set的底层是通过Map来做实现的，也叫HashSet。</p>
+
+<h3 id="hashmaphashtable">HashMap/HashTable</h3>
+
+<p>HashMap可以理解为Map的衍生，也可以理解为是其中一种具体的实现。通过结合Hash算法，可以控制Pair中Key的冲撞几率，可以用较少的Key储存更多的Value。然而，这样的结果就是Pair中的Value就会存在多个，在Java中是使用LinkedList来存储同一个pair中的多个value的。</p>
+
+<p>tips: 优化</p>
+
+<h2 id="tree的衍生">Tree的衍生</h2>
+
+<h3 id="search-tree">Search Tree</h3>
+
+<p>我们之前有说到，Tree的查找是有受到二分法的启发。二分法可以使用的一个必要条件就是需要元素是有序的。因此，想要Tree的查找应用二分法查找的方式，自然其中的元素也必须是有序的。
+这种Tree，被命名为Search Tree，其中任何节点都必须比左子树中的节点大，而比右子树上的节点小。</p>
+
+<h3 id="binarytree">BinaryTree</h3>
+
+<p>那要让二分查找法在Tree中的效率最高，就最好是每个节点下都之后两个子节点，这种类型的Tree我们叫它BinaryTree。所以BinarySearchTree理论上是Tree中搜索速度最快的。</p>
+
+<h3 id="balancedtreeavl-tree-treap-splay-tree-redblacktree-et-al">BalancedTree(AVL Tree, Treap, Splay Tree, RedBlackTree et al.)</h3>
+
+<p>Tree的搜索效率还有一个重要的影响因素，就是树的高度。
+那程序员就想如何才能让树的高度永远处于一个最优的情况呢？
+其实高度最优的情况就是避免产生极度坏的情况(极度坏的情况其实就类似链表了)，让根节点到每个叶子节点的路径都相等，就避免了最坏查询情况的产生。
+要想达到该效果，就要在每次新元素加入或移除的时候，对树做一些额外调整，也就产生了自平衡树。</p>
+
+<h3 id="priority-queue--heapmax--min">Priority Queue &amp; Heap(Max &amp; Min)</h3>
+<p>基于Search Tree的一个拓展，Seach Tree的排序是从左到右的。那程序员有天就想，如果是一个优先取最小值的场景的话，将排序做成垂直的，从小到大排列，那不是第一个就是最小值么，于是做了这样的优化后，就产生了Priority Queue。同理，也适用于从大到小排列的场景。</p>
+
+<h2 id="tree在业务场景中衍生的数据结构">Tree在业务场景中衍生的数据结构</h2>
+<h3 id="trie">Trie</h3>
+<p>利用Tree分叉的结构来做单词搜索，提升搜索效率，产生了新的数据结构Trie。</p>
+
+<h3 id="b-tree">B Tree</h3>
+<p>self-balancing
+more than two children
+sorted</p>
+
+<h3 id="b-tree-1">B+ Tree</h3>
+<p>B tree with linked leaf node</p>
+
+<h3 id="treemap">TreeMap</h3>
+<p>让Map有序</p>
+
+<h2 id="更多高级数据结构">更多高级数据结构</h2>
+
+<h3 id="graph">Graph</h3>
+
+<h3 id="bloomfilter">BloomFilter</h3>
+<p>空间效率和查询时间</p>
+
+<h3 id="disjoint-setunion--find">Disjoint-set(Union &amp; Find)</h3>
+
+
+<hr>
+
+<p>
+Tags:&nbsp;
+
+  <a class='tag' href="/categories/programming" name="programming">programming</a>
+
+</p>
+
+
+        </section>
+
+        <aside id="sidebar">
+          <!-- <a href="https://github.com/pietromenna/jekyll&#45;architect&#45;theme/archive/master.zip" class="button"> -->
+          <!--   <small>Download</small> -->
+          <!--   .zip file -->
+          <!-- </a> -->
+          <!-- <a href="https://github.com/pietromenna/jekyll&#45;architect&#45;theme/archive/master.tar.gz" class="button"> -->
+          <!--   <small>Download</small> -->
+          <!--   .tar.gz file -->
+          <!-- </a> -->
+          <h3>Categories:</h3>
+          <ul>
+            <li><a href="/">Home</a></li>
+            
+              <li><a href="/categories/ruby" name="ruby"># ruby</a></li>
+            
+              <li><a href="/categories/programming" name="programming"># programming</a></li>
+            
+              <li><a href="/categories/reading" name="reading"># reading</a></li>
+            
+              <li><a href="/categories/life" name="life"># life</a></li>
+            
+              <li><a href="/categories/work" name="work"># work</a></li>
+            
+              <li><a href="/categories/system design" name="system design"># system design</a></li>
+            
+          </ul>
+
+        </aside>
+      </div>
+    </div>
+
+  </body>
+</html>

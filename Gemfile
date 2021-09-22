@@ -10,3 +10,8 @@ gem 'jekyll-seo-tag'
 gem 'kramdown'
 gem 'pygments.rb'
 gem "rake", ">= 12.3.3"
+
+# This part is added
+group :jekyll_plugins do
+  gem "jekyll-mermaid"
+end
