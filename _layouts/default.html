@@ -1,68 +1,59 @@
+---
+layout: compress
+# Default layout
+---
+
 <!DOCTYPE html>
-<html lang="{{ site.locale }}">
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/stylesheets/print.css" media="print" />
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <title> {{ page.title }} </title>
-    {% seo %}
-  </head>
+{% include lang.html %}
 
-  <body>
-    <header>
-      <div class="inner">
-        <!-- <h1> {{ site.name }} </h1> -->
-        <h1>Jevan Wu</h1>
-        <h2>Who: Web developer | Team Lead | Vim User <br> Location: Chengdu, China</h2>
-        <h3>
-          contacts:
-          <a href="https://github.com/JevanWu" target="_blank">Github</a> |
-          <a href="https://www.linkedin.com/in/jevan-wu/" target="_blank">Linkedin</a> |
-          <a href="mailto:jevanwu@gmail.com">Email</a>
-        </h3>
-        <div class="avatar">
-          <img src="/images/avatar.jpeg"/>
-        </div>
-        <!-- <a href="https://github.com/pietromenna/jekyll&#45;architect&#45;theme" class="button"><small>Follow me on</small>GitHub</a> -->
+{% capture prefer_mode %}
+  {% if site.theme_mode %}
+    data-mode="{{ site.theme_mode }}"
+  {% endif %}
+{% endcapture %}
+
+<html lang="{{ site.lang }}"{{ prefer_mode }}>
+
+  {% include head.html %}
+
+  {% unless site.theme_mode %}
+    {% include mode-toggle.html %}
+  {% endunless %}
+
+  <body data-spy="scroll" data-target="#toc" data-topbar-visible="true">
+
+    {% include sidebar.html %}
+
+    {% include topbar.html %}
+
+    <div id="main-wrapper">
+      <div id="main">
+
+        {{ content }}
+
+        {% include footer.html %}
+
       </div>
-    </header>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
+      {% include search-results.html %}
 
-          {{ content }}
+    </div> <!-- #main-wrapper -->
 
-        </section>
+    {% if page.mermaid %}
+      {% include mermaid.html %}
+    {% endif %}
 
-        <aside id="sidebar">
-          <!-- <a href="https://github.com/pietromenna/jekyll&#45;architect&#45;theme/archive/master.zip" class="button"> -->
-          <!--   <small>Download</small> -->
-          <!--   .zip file -->
-          <!-- </a> -->
-          <!-- <a href="https://github.com/pietromenna/jekyll&#45;architect&#45;theme/archive/master.tar.gz" class="button"> -->
-          <!--   <small>Download</small> -->
-          <!--   .tar.gz file -->
-          <!-- </a> -->
-          <h3>Categories:</h3>
-          <ul>
-            <li><a href="/">Home</a></li>
-            {% for category in site.categories %}
-              <li><a href="/categories/{{ category | first }}" name="{{ category | first }}"># {{ category | first }}</a></li>
-            {% endfor %}
-          </ul>
+    <div id="mask"></div>
 
-        </aside>
-      </div>
-    </div>
+    <a id="back-to-top" href="#" aria-label="back-to-top" class="btn btn-lg btn-box-shadow" role="button">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+    {% include search-loader.html %}
+
+    {% include js-selector.html %}
 
   </body>
+
 </html>

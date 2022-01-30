@@ -1,92 +1,105 @@
-# Architect theme
+<div align="center">
 
-This is a [Jekyll][1] theme that is an adaptation of [@jasonlong][2]'s [Architect theme][4] on [GitHub Pages][3].
+  # Chirpy Jekyll Theme
 
-This is the raw HTML and styles that are used for the *Architect* theme on [GitHub Pages](https://pages.github.com/).
+  A minimal, responsive, and powerful Jekyll theme for presenting professional writing.
 
-![](https://cl.ly/image/1x0Q3213330G/content)
+  [![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy?color=brightgreen)](https://rubygems.org/gems/jekyll-theme-chirpy)
+  [![Build Status](https://github.com/cotes2020/jekyll-theme-chirpy/workflows/build/badge.svg?branch=master&event=push)](https://github.com/cotes2020/jekyll-theme-chirpy/actions?query=branch%3Amaster+event%3Apush)
+  [![Codacy Badge](https://app.codacy.com/project/badge/Grade/4e556876a3c54d5e8f2d2857c4f43894)](https://www.codacy.com/gh/cotes2020/jekyll-theme-chirpy/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=cotes2020/jekyll-theme-chirpy&amp;utm_campaign=Badge_Grade)
+  [![GitHub license](https://img.shields.io/github/license/cotes2020/jekyll-theme-chirpy.svg)](https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/LICENSE)
+  [![996.icu](https://img.shields.io/badge/link-996.icu-%23FF4D5B.svg)](https://996.icu)
 
-# Getting Started
+  [**Live Demo →**](https://cotes2020.github.io/chirpy-demo)
 
-## Prerequisites
+  [![Devices Mockup](https://raw.githubusercontent.com/cotes2020/chirpy-images/main/commons/devices-mockup.png)](https://cotes2020.github.io/chirpy-demo)
 
-To install this theme, jekyll is required to be installed on your system. Head over to the [docs](https://jekyllrb.com/docs/installation/) and install the four requirements (Ruby, RubyGems, Node.js and Python 2.7). If you're on a Mac system, it's likely the only package you'll need to install is Node.js
+</div>
 
-Once you've installed the requirements, run this command in your terminal:
+## Features
 
-```
-$ sudo gem install jekyll
-```
+- Localized Layout
+- Dark/Light Theme Mode
+- Pinned Posts
+- Hierarchical Categories
+- Last Modified Date for Posts
+- Table of Contents
+- Auto-generated Related Posts
+- Syntax Highlighting
+- Mathematical Expressions
+- Mermaid Diagram & Flowchart
+- Disqus/Utterances Comments
+- Search
+- Atom Feeds
+- Google Analytics
+- GA Pageviews Reporting
+- SEO & Performance Optimization
 
-You'll also need to install the bundler package:
 
-```
-$ sudo gem install bundler
-```
+## Quick Start
 
-## Downloading and Installing the theme
+Before starting, please follow the instructions in the [Jekyll Docs](https://jekyllrb.com/docs/installation/) to complete the installation of `Ruby`, `RubyGems`, `Jekyll`, and `Bundler`. In addition, [Git](https://git-scm.com/) is also required to be installed.
 
-Download the theme
+### Step 1. Creating a New Site
 
-```
-https://github.com/pietromenna/jekyll-architect-theme/archive/master.zip
-```
+Create a new repository from the [**Chirpy Starter**](https://github.com/cotes2020/chirpy-starter/generate) and name it `<GH_USERNAME>.github.io`, where `GH_USERNAME` represents your GitHub username.
 
-Unzip it and use it as a regular jekyll folder.
+### Step 2. Installing Dependencies
 
-```
-$ unzip jekyll-architect-theme-master.zip
-```
+Before running for the first time, go to the root directory of your site, and install dependencies as follows:
 
-Get inside the newly extracted folder
-
-```
-$ cd jekyll-architect-theme-master
-```
-
-Install the dependencies
-
-```
-$ bundle install
-```
-
-Use it!
-
-```
-$ jekyll serve
+```console
+$ bundle
 ```
 
-# Setup
+### Step 3. Running Local Server
 
-Some important configuration can be done in the file `_config.yml`. Please, check the Setup section in that file.
+Run the following command in the root directory of the site:
 
+```console
+$ bundle exec jekyll s
+```
 
-## baseurl
+Or run with Docker:
 
-`baseurl` parameter is required in the case the site doesn't sit on the root of the domain. For example: https://pietromenna.github.io/jekyll-architect-theme
+```console
+$ docker run -it --rm \
+    --volume="$PWD:/srv/jekyll" \
+    -p 4000:4000 jekyll/jekyll \
+    jekyll serve
+```
 
-In the case above the baseurl should be set to "/jekyll-architect-theme".
+After a while, navigate to the site at <http://localhost:4000>.
 
-In the case the site sits in the root, you can leave `baseurl` as empty "".
+## Documentation
 
+For more details on usage, please refer to the tutorial on the [demo website](https://cotes2020.github.io/chirpy-demo/) / [wiki](https://github.com/cotes2020/jekyll-theme-chirpy/wiki). Note that the tutorial is based on the [latest tag](https://github.com/cotes2020/jekyll-theme-chirpy/tags), and the features of the default branch are usually ahead of the documentation.
 
-For more details read about [Jekyll][1] on its web page.
+## Contributing
 
-# Contributing
+Welcome to report bugs, improve code quality or submit a new feature. For more information, see [contributing guidelines](.github/CONTRIBUTING.md).
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/pietromenna/jekyll-architect-theme.
+## Credits
 
-# Development
+This theme is mainly built with [Jekyll](https://jekyllrb.com/) ecosystem, [Bootstrap](https://getbootstrap.com/), [Font Awesome](https://fontawesome.com/) and some other wonderful tools (their copyright information can be found in the relevant files). The avatar and favicon design come from [Clipart Max](https://www.clipartmax.com/middle/m2i8b1m2K9Z5m2K9_ant-clipart-childrens-ant-cute/).
 
-To set up your environment to develop this theme, run `bundle install`.
+:tada: Thanks to all the volunteers who contributed to this project, their GitHub IDs are on [this list](https://github.com/cotes2020/jekyll-theme-chirpy/graphs/contributors). Also, I won't forget those guys who submitted the issues or unmerged PR because they reported bugs, shared ideas, or inspired me to write more readable documentation.
 
-You theme is setup just like a normal Jelyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
+Last but not least, thank [JetBrains][jb] for providing the OSS development license.
 
-# License
+## Sponsoring
 
-This work is licensed under a [Creative Commons Attribution 4.0 International](http://creativecommons.org/licenses/by/4.0/).
+If you like this theme or find it helpful, please consider sponsoring me, because it will encourage and help me better maintain the project, I will be very grateful!
 
-[1]: https://jekyllrb.com
-[2]: https://github.com/jasonlong
-[3]: http://pages.github.com/
-[4]: https://github.com/jasonlong/architect-theme
+[![Ko-fi](https://img.shields.io/badge/-Buy%20Me%20a%20Coffee-ff5f5f?logo=ko-fi&logoColor=white)](https://ko-fi.com/coteschung)
+[![Wechat Pay](https://img.shields.io/badge/-Tip%20Me%20on%20WeChat-brightgreen?logo=wechat&logoColor=white)][cn-donation]
+[![Alipay](https://img.shields.io/badge/-Tip%20Me%20on%20Alipay-blue?logo=alipay&logoColor=white)][cn-donation]
+
+## License
+
+This work is published under [MIT](https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/LICENSE) License.
+
+<!-- ReadMe links -->
+
+[jb]: https://www.jetbrains.com/?from=jekyll-theme-chirpy
+[cn-donation]: https://cotes.gitee.io/alipay-wechat-donation/
