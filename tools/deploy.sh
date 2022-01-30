@@ -8,7 +8,7 @@
 
 set -eu
 
-PAGES_BRANCH="github-pages"
+PAGES_BRANCH="gh-pages"
 
 SITE_DIR="_site"
 
