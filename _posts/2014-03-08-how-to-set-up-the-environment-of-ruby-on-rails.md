@@ -5,7 +5,7 @@ date:   2014-03-08 22:35:42
 categories: [ruby, programming]
 ---
 
-#### 1. Install RVM and Ruby
+## Install RVM and Ruby
   RVM is used to manage different version of ruby. With RVM, you can switch between multiple different version of ruby.
   To install RVM, simply type the following command in the terminal
 
@@ -27,7 +27,7 @@ categories: [ruby, programming]
 
   to check if the ruby is available.
 
-#### 2. Install Rails
+## Install Rails
   Rails is the popular web framework based on ruby.
   With Ruby installed, you can install all of Rails and its dependencies through RubyGems on the command line:
 

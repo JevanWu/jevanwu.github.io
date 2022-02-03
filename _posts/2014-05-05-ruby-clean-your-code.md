@@ -1,14 +1,14 @@
 ---
 layout: post
 title: "Ruby: Clean your code!"
-date:   2014-05-05 and updating
+date:   2014-05-05
 categories: [programming, ruby]
 ---
 
-## 1. Minimize the number of "nested if statement"
+## Minimize the number of "nested if statement"
   "nested if statement" is normally considered as the code smell. We should try to minimize the number of "nested if statement", though we cannot avoid using it completely.
 
-#### 1. if the 'if statement' is embraced by a loop and without 'else', use 'next' instead
+### if the 'if statement' is embraced by a loop and without 'else', use 'next' instead
  original code:
 
  ```ruby
@@ -39,7 +39,7 @@ categories: [programming, ruby]
  ```
  It looks much better to me.
 
-#### 2. use variable to eliminate the 'if statement'
+### use variable to eliminate the 'if statement'
  original code:
 
  ```ruby

@@ -5,14 +5,14 @@ date:   2015-01-31 22:07:20
 categories: [ruby, programming]
 ---
 
-#### 1. Dynamic Patch
+## Dynamic Patch
   the `send` method could be used to call methods
 
   ```
   obj.send(:my_method, params)
   ```
 
-#### 2. Dynamic Method
+## Dynamic Method
   the `define_method` method could be used to create instance method
 
   ```
@@ -31,7 +31,7 @@ categories: [ruby, programming]
   f.instance_method(:method_name)
   ```
 
-#### 3. Remove Method
+## Remove Method
   the `undef_method` method could be used to remove method, it would remove both receiver's methods and inherited methods
 
   ```
