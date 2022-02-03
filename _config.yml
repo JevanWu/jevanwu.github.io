@@ -88,7 +88,7 @@ theme_mode:   # [light|dark]
 img_cdn: 'https://zhishi.oss-cn-beijing.aliyuncs.com/perm'
 
 # the avatar on sidebar, support local or CORS resources
-avatar: '/avatar/1.jpeg'
+avatar: '/avatar/1.jpeg?x-oss-process=image/resize,h_150,m_lfit'
 
 # boolean type, the global switch for ToC in posts.
 toc: true
