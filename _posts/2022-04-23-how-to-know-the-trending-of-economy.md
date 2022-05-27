@@ -50,7 +50,7 @@ categories: [investment]
 
 如果发送倒挂，则是需要警惕的信号，理论上这种现象不应该维持长时间。
 
-## 外伤直接投资数据(FDI)
+## 外商直接投资数据(FDI)
 
 [FDI](https://data.eastmoney.com/cjsj/fdi.html)
 
