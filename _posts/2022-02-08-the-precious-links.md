@@ -19,4 +19,5 @@ This article records the web links which I think is valuable and worth a look.
 ## Business
 
 [Paul Graham's Article](http://www.paulgraham.com/articles.html)
+[Sam Altman](https://blog.samaltman.com/)
 [Reid Hoffman](https://www.reidhoffman.org/)

@@ -54,5 +54,8 @@ categories: [investment]
 
 [FDI](https://data.eastmoney.com/cjsj/fdi.html)
 
+## 投资者人数
+[投资者人数](https://data.eastmoney.com/cjsj/gpkhsj.html) 可以看出当前人民对市场的信息和狂热程度。例如2015年的高峰，账户数则达到400多w户
+
 
 [^influence]: 美国的加息叠加上上海的封城让外资对中国的投资非常保守，导致如何不管是[投资机构](https://mp.weixin.qq.com/s/K616orucZpLy9YVCPUjTXQ)还是互联网企业都非常艰难。
