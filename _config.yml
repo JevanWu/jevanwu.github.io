@@ -23,7 +23,7 @@ timezone: Asia/Shanghai
 
 title: Jevan Wu                          # the main title
 
-tagline: A Web developer   # it will display as the sub-title
+tagline: Don't Panic  # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   A minimal, portfolio, sidebar,
@@ -40,7 +40,7 @@ linkedin:
   username: jevan-wu # change to your github username
 
 twitter:
-  username: twitter_username            # change to your twitter username
+  username: JevanWu            # change to your twitter username
 
 social:
   # Change to your full name.
@@ -150,6 +150,7 @@ defaults:
 
 sass:
   style: compressed
+  quiet_deps: true
 
 compress_html:
   clippings: all
